@@ -61,8 +61,16 @@
   .nav-cta:hover{transform:translateY(-2px); box-shadow:var(--shadow);}
   .navtoggle{display:none;}
   @media(max-width:860px){
-    .navlinks{display:none;}
-    .navtoggle{display:block; font-size:1.4rem; color:var(--espresso); background:none; border:none; cursor:pointer;}
+    nav{padding:14px 20px;}
+    .navlinks{display:none; position:absolute; top:100%; left:0; right:0;
+      flex-direction:column; gap:0; padding:8px 20px 20px;
+      background:rgba(250,248,245,0.98); border-bottom:1px solid rgba(91,58,41,0.12);
+      box-shadow:0 18px 30px -20px rgba(91,58,41,0.35);}
+    .navlinks.open{display:flex;}
+    .navlinks a{padding:14px 0; font-size:1rem; border-bottom:1px solid rgba(91,58,41,0.08);}
+    .navlinks a::after{display:none;}
+    .navlinks a.nav-cta{margin-top:14px; text-align:center; border-bottom:none; padding:13px 22px;}
+    .navtoggle{display:block; font-size:1.6rem; line-height:1; color:var(--espresso); background:none; border:none; cursor:pointer; padding:6px;}
   }
 
   /* ---------- HERO ---------- */
@@ -302,6 +310,7 @@
 <header>
   <nav>
     <div class="brand">Oruka <span>Akpovoke</span></div>
+    <button class="navtoggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
     <div class="navlinks">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -721,5 +730,18 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var btn=document.querySelector('.navtoggle'), links=document.querySelector('.navlinks');
+  if(!btn||!links) return;
+  btn.addEventListener('click',function(){
+    var open=links.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open); btn.innerHTML=open?'&#10005;':'&#9776;';
+  });
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+    links.classList.remove('open'); btn.setAttribute('aria-expanded','false'); btn.innerHTML='&#9776;';
+  });});
+})();
+</script>
 </body>
 </html>
