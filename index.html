@@ -145,13 +145,13 @@
   .about-grid{display:grid; grid-template-columns:0.8fr 1.2fr; gap:60px; align-items:center;}
   @media(max-width:860px){.about-grid{grid-template-columns:1fr;}}
   .about-card{
-    background:#fff; border:1px solid var(--espresso-10); border-radius:18px; padding:34px;
+    background:#fff; border:1px solid rgba(91,58,41,0.16); border-radius:18px; padding:34px;
     box-shadow:var(--shadow);
   }
   .about-card p{margin-bottom:16px; color:#4a423c;}
   .roles-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px;}
   .role-pill{
-    background:var(--ivory); border:1px solid var(--gold); color:var(--espresso);
+    background:var(--ivory); border:1px solid #C4A57F; color:var(--espresso);
     padding:8px 16px; border-radius:100px; font-size:0.82rem; font-weight:600;
   }
 
@@ -159,8 +159,9 @@
   .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
   @media(max-width:960px){.services-grid{grid-template-columns:repeat(2,1fr);}}
   @media(max-width:640px){.services-grid{grid-template-columns:1fr;}}
+  .service-wide{grid-column:1/-1;}
   .service-card{
-    background:#fff; border:1px solid var(--espresso-10); border-radius:16px; padding:30px;
+    background:#fff; border:1px solid rgba(91,58,41,0.16); border-radius:16px; padding:30px;
     transition:transform .3s, box-shadow .3s; position:relative; overflow:hidden;
   }
   .service-card:hover{transform:translateY(-6px); box-shadow:var(--shadow);}
@@ -200,7 +201,7 @@
   .proof-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:26px;}
   @media(max-width:860px){.proof-grid{grid-template-columns:1fr;}}
   .proof-card{
-    background:#fff; border:1px solid var(--espresso-10); border-radius:18px; overflow:hidden;
+    background:#fff; border:1px solid rgba(91,58,41,0.16); border-radius:18px; overflow:hidden;
     box-shadow:0 10px 30px -18px rgba(91,58,41,0.25); transition:box-shadow .3s;
   }
   .proof-card:hover{box-shadow:var(--shadow);}
@@ -225,7 +226,7 @@
   .proof-meta div span{display:block; color:#8a7d70; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:3px;}
   .proof-meta div b{color:var(--espresso); font-weight:600;}
   .proof-result{
-    margin-top:16px; background:var(--ivory); border-left:3px solid var(--gold);
+    margin-top:16px; background:var(--ivory); border-left:3px solid #C4A57F;
     padding:10px 14px; font-size:0.82rem; color:var(--charcoal); border-radius:0 8px 8px 0;
   }
 
@@ -247,7 +248,7 @@
     background:var(--ivory); border:3px solid var(--espresso);
   }
   @media(max-width:640px){.tl-dot{left:3px;}}
-  .tl-card{background:#fff; border:1px solid var(--espresso-10); border-radius:14px; padding:26px 28px;}
+  .tl-card{background:#fff; border:1px solid rgba(91,58,41,0.16); border-radius:14px; padding:26px 28px;}
   .tl-top{display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; align-items:baseline; margin-bottom:6px;}
   .tl-top h3{font-size:1.1rem;}
   .tl-meta{font-size:0.78rem; color:var(--caramel); font-weight:700; letter-spacing:0.03em;}
@@ -279,9 +280,9 @@
   .contact-links{display:flex; flex-direction:column; gap:18px; margin-top:26px;}
   .contact-link{
     display:flex; align-items:center; gap:14px; padding:14px 18px; border-radius:12px;
-    border:1px solid var(--espresso-10); font-weight:600; font-size:0.92rem; transition:all .25s;
+    border:1px solid rgba(91,58,41,0.16); font-weight:600; font-size:0.92rem; transition:all .25s;
   }
-  .contact-link:hover{background:var(--ivory); border-color:var(--gold); transform:translateX(4px);}
+  .contact-link:hover{background:var(--ivory); border-color:#C4A57F; transform:translateX(4px);}
   .contact-icon{width:22px; text-align:center; color:var(--caramel);}
   .social-row{display:flex; gap:12px; margin-top:26px;}
   .social-chip{
@@ -324,12 +325,13 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">Operations Manager · Project Manager · Executive Assistant</div>
+      <div class="eyebrow">Executive Assistant · Operations Coordinator · Project Support</div>
       <h1>Your calm <em>in the midst</em><br>of a busy schedule.</h1>
       <p class="lede">I'm someone who enjoys bringing structure to busy days and calm to moving parts. Whether it's managing calendars, coordinating communication, or handling day-to-day operations, I approach everything with care, attention, and reliability.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Work with me →</a>
         <a href="#work" class="btn-ghost">See proof of work</a>
+        <a href="Oruka_Akpovoke_CV.pdf" class="btn-ghost" download>Download my CV ↓</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -349,7 +351,7 @@
       </div>
       <div class="about-card">
         <p>I believe that behind every great idea or business, there's someone quietly making sure things flow, and that's where I come in.</p>
-        <p>I love organizing, planning, and simplifying work so people can focus on what truly matters. Whether it's managing calendars, coordinating communication, or handling day-to-day operations, I approach everything with care, attention, and reliability.</p>
+        <p>I love organizing, planning, and simplifying work so people can focus on what truly matters.</p>
         <p>Beyond work, I value growth and consistency, because a calm mind leads to great results. My goal is simple: to make work easier, smoother, and a little more stress-free for the people I support.</p>
         <div class="roles-row">
           <span class="role-pill">Executive Assistant</span>
@@ -367,7 +369,7 @@
     <div class="section-head">
       <div class="eyebrow">What I Do</div>
       <h2>Service Packages</h2>
-      <p>Six ways I help founders and growing teams stay organized, focused, and moving forward.</p>
+      <p>Seven ways I help founders and growing teams stay organized, focused, and moving forward.</p>
     </div>
     <div class="services-grid">
 
@@ -437,6 +439,17 @@
         </ul>
       </div>
 
+      <div class="service-card service-wide">
+        <div class="service-num">07</div>
+        <h3>Social Media &amp; Content Support</h3>
+        <p>Consistent, on-brand social media that keeps a business visible without taking up the founder's time.</p>
+        <ul>
+          <li>Post, carousel &amp; short video design in Canva and CapCut</li>
+          <li>Content calendars, captions &amp; scheduling</li>
+          <li>Performance tracking &amp; content reviews</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
@@ -482,7 +495,10 @@
       <span class="tool-chip">Slack</span>
       <span class="tool-chip">Zoom</span>
       <span class="tool-chip">Amazon Seller Central</span>
+      <span class="tool-chip">Monday.com</span>
       <span class="tool-chip">Canva</span>
+      <span class="tool-chip">CapCut</span>
+      <span class="tool-chip">Meta Business Suite</span>
       <span class="tool-chip">Claude</span>
       <span class="tool-chip">ChatGPT</span>
     </div>
@@ -574,7 +590,7 @@
             <div><span>Tools</span><b>Sheets, Excel</b></div>
             <div><span>Format</span><b>Quarterly Reporting</b></div>
           </div>
-          <div class="proof-result">Result: Organized reporting that informed leadership planning discussions.</div>
+          <div class="proof-result">Result: Q2 trends identified and used to shape Q3 planning.</div>
         </div>
       </div>
 
@@ -590,7 +606,7 @@
             <div><span>Tools</span><b>Sheets, Web Research</b></div>
             <div><span>Format</span><b>Project-Based</b></div>
           </div>
-          <div class="proof-result">Result: Delivered qualified prospects supporting outreach and sponsorship goals.</div>
+          <div class="proof-result">Result: One researched lead converted into a paying client.</div>
         </div>
       </div>
 
@@ -606,7 +622,7 @@
             <div><span>Tools</span><b>Microsoft Excel</b></div>
             <div><span>Format</span><b>Built From Scratch</b></div>
           </div>
-          <div class="proof-result">Result: Improved record accuracy and reduced time spent on manual booking.</div>
+          <div class="proof-result">Result: Replaced manual bookings, with payment records kept at zero discrepancies for about three years.</div>
         </div>
       </div>
 
@@ -631,10 +647,12 @@
           </div>
           <div class="tl-company">Multi-Venture Founder Support · Remote</div>
           <ul>
-            <li>Manage calendars, scheduling, and inbox across multiple business lines</li>
-            <li>Maintain SOPs, trackers, and documentation across ventures</li>
-            <li>Support project coordination and day-to-day operations for a fast-moving founder</li>
-            <li>Handle confidential business and third-party information with discretion</li>
+            <li>Manage priorities, meetings, deadlines, approvals and follow-ups for a founder across seven ventures</li>
+            <li>Run Asana across six venture and project boards, turning instructions and voice notes into tracked tasks</li>
+            <li>Send end-of-day updates on what's done, what's waiting and what's next</li>
+            <li>Plan, design and schedule Instagram content for a nonprofit client in Canva and CapCut, tracking post performance</li>
+            <li>Plan multi-week promotion campaigns for virtual events</li>
+            <li>Maintain SOPs, trackers and documentation, and handle confidential information with discretion</li>
           </ul>
         </div>
       </div>
@@ -667,28 +685,9 @@
           </div>
           <div class="tl-company">Full-Service Hospitality Venue · Niger State, Nigeria · Onsite</div>
           <ul>
-            <li>Sole point of contact for client communication, addressing inquiries and follow-up</li>
-            <li>Introduced a spreadsheet-based tracking system, replacing a manual booking process</li>
-            <li>Recorded daily payments and transactions, reporting directly to the owner</li>
-            <li>Tracked incoming goods, placed orders, and coordinated with vendors</li>
-            <li>Assigned daily tasks to staff and took part in interviewing and onboarding</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-top">
-            <h3>Administrative &amp; Academic Coordinator</h3>
-            <span class="tl-meta">Jan 2024 – Oct 2024</span>
-          </div>
-          <div class="tl-company">National Youth Service Corps Placement · Nigeria · Onsite</div>
-          <ul>
-            <li>Maintained accurate student and staff records following school timetables</li>
-            <li>Resolved parent and student inquiries, escalating where appropriate</li>
-            <li>Took daily attendance and prepared academic performance reports</li>
-            <li>Created lesson plans while teaching Basic Science and Agricultural Science</li>
+            <li>Introduced a spreadsheet-based booking system, replacing a fully manual process</li>
+            <li>Recorded daily payments and transactions with zero discrepancies, reporting directly to the owner</li>
+            <li>Main point of contact for customer enquiries and follow-up</li>
           </ul>
         </div>
       </div>
@@ -709,6 +708,9 @@
         </div>
       </div>
       <div class="contact-links">
+        <a href="Oruka_Akpovoke_CV.pdf" class="contact-link" download>
+          <span class="contact-icon">↓</span> Download my CV (PDF)
+        </a>
         <a href="mailto:orokaakpovoke@gmail.com" class="contact-link">
           <span class="contact-icon">✉</span> orokaakpovoke@gmail.com
         </a>
